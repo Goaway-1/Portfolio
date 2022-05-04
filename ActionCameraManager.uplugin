@@ -1,0 +1,26 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.1",
+	"FriendlyName": "ActionCameraManager",
+	"Description": "This Plugin is the main camera manager used in 2D and 3D games.",
+	"Category": "Camera",
+	"CreatedBy": "Namaan",
+	"CreatedByURL": "https://github.com/goaway-1",
+	"DocsURL": "",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/6b542e9ad0b64686b1bf31dca9276316",
+	"SupportURL": "",
+	"EngineVersion": "5.0.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "ActionCameraManager",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64"
+			]
+		}
+	]
+}
