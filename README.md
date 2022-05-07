@@ -1,20 +1,15 @@
 > # 게임 플레이 프로그래머_조민식_포트폴리오
-  |||
-  |:--:|:--:|
-  |이름|조민식|
-  |생년월일|1998.12.25|
-  |이메일|richardqwe46@gmail.com|
 
 >## 목차
 |제목|설명|영상링크|
 |:--:|:--:|:--:|
-|1. [ActionCameraManager Plugin](#1.-ActionCameraManager-Plugin)|대전 격투 게임에 사용되는 카메라 플러그인|[플레이영상](https://youtu.be/iWDMIVvR27I), [비교영상](https://youtu.be/aYKv8t6HNXk)|
+|1. [ActionCameraManager Plugin](#1.-ActionCameraManager-Plugin)|대전 격투 게임에 사용되는 카메라 관리자 플러그인|[플레이영상](https://youtu.be/iWDMIVvR27I), [비교영상](https://youtu.be/aYKv8t6HNXk)|
 |2. [Battle Arena](#2.-Battle-Arena)|언리얼 엔진으로 제작한 RPG 게임|[플레이영상](https://youtu.be/Hd_fOEuh47s)|
 
 > ## 1. ActionCameraManager Plugin
   |<h3>__ActionCameraManger__</h3>|<h3>__Naurto__</h3>|
   |:--:|:--:|
-  |<img src="Image/Cameramanager.gif" height="300" title="Cameramanager">|<img src="Image/Naruto.gif" height="300" title="Naruto">|
+  |<img src="Image/Cameramanager.gif" height="250" title="Cameramanager">|<img src="Image/Naruto.gif" height="250" title="Naruto">|
   |개발한 액션 카메라의 움직임|참조한 나루토 얼티밋 스톰4 의 카메라의 움직임|
 
   |||
@@ -25,7 +20,7 @@
   |프로젝트 내용|철권7, 나루토 얼티밋 스톰4 와 같은 __대전 격투 게임에서 사용하는 로컬 카메라 플러그인으로__ 총 3가지(2D_FIX, 2D, 3D)의 모드로 구성되고, 본 포트폴리오에서는 3D에 대해서만 기술|
   |주요 업무|카메라 구조 & 로직 구현, 플러그인 배포|
   |사용언어 및 개발 환경|C++, Unreal Engine(5.0.1), Visual Studio Community 2022, Window10|
-  |참고 자료|[UnrealEngine MarketPlace](https://www.unrealengine.com/marketplace/en-US/product/6b542e9ad0b64686b1bf31dca9276316), [Preview Video](https://youtu.be/iWDMIVvR27I), [Setup Video](https://youtu.be/7N1cTe_sLFk), [Test Project](https://drive.google.com/file/d/1rqQjbcDdOxXinYIBNvA0E9hg38SsS1CW/view?usp=sharing), [GitHub(자세한 설명)](https://github.com/Goaway-1/ActionCameraPlugin)|
+  |참고 자료|[UnrealEngine MarketPlace](https://www.unrealengine.com/marketplace/en-US/product/6b542e9ad0b64686b1bf31dca9276316), [Preview Video](https://youtu.be/iWDMIVvR27I), [Setup Video](https://youtu.be/7N1cTe_sLFk), [Test Project](https://drive.google.com/file/d/1rqQjbcDdOxXinYIBNvA0E9hg38SsS1CW/view?usp=sharing)|
 
   - ### **<h3>구조 및 원리</h3>**
     - <img src="Image/Camera_Struct.png" height="450" title="Camera_Struct">
@@ -42,7 +37,7 @@
     - ## __1. SpringArm의 길이/각도 조정__
       - __기능 소개__ : 플레이어 간의 거리를 기준으로 SpringArm의 길이와 각도를 조정하여, 두 플레이어가 카메라 시점에 잡히도록 조정
       - ### __1_1. DefaultSceneRoot의 위치 지정__
-        - <img src="Image/RootSceneComp_Vec.gif" height="250" title="RootSceneComp_Vec"><img src="Image/DefaultSceneVec.png" height="250" title="DefaultSceneVec">
+        - <img src="Image/RootSceneComp_Vec.gif" height="300" title="RootSceneComp_Vec"><img src="Image/DefaultSceneVec.png" height="250" title="DefaultSceneVec">
 
         - 위 영상처럼 DefaultSceneRoot는 항상 두 플레이어의 중심에 위치
           
@@ -187,22 +182,22 @@
         ```
         </details>
 
-  - ### __<h3>가장 신경 쓴 부분와 겪은 수행 착오</h3>__
-    - 카메라 매니저의 구조, 로직에 대한 설계에 대해서 가장 신경을 썻습니다.
-      - 철권7과 같은 2D모드 형식의 설계는 어렵지 않았지만, 나루토 얼티밋 스톰과 같은 3D모드 형식의 설계가 어려웠습니다. 어떠한 조건에 영향을 받아서 Default의 회전이 이루어지는지에 대해서 가장 고민을 많이 하였습니다.
-      - 직접 게임을 플레이하면서 어떠한 조건에 영향을 받아 회전하는지 생각하였고, 그 결과 2가지의 방법을 구상하게 되었습니다.
+  - ### __<h3>가장 신경 쓴 부분과 겪은 수행 착오</h3>__
+    - 카메라 매니저의 구조, 로직에 대한 설계에 대해서 가장 많은 노력을 기울였습니다.
+    - 철권7과 같은 2D모드 형식의 설계는 어렵지 않았지만, 나루토 얼티밋 스톰과 같은 3D모드 형식의 설계가 어려웠습니다. 어떠한 조건에 영향을 받아서 Default의 회전이 이루어지는지에 대해서 가장 고민을 많이 하였습니다.
+    - 직접 게임을 플레이하면서 어떠한 조건에 영향을 받아 회전하는지 생각하였고, 그 결과 2가지의 방법을 구상하게 되었습니다.
       
-      - ### 1. <U>플레이어들의 뷰포트 상(플레이 화면)의 위치를 받아 일정 영역의 범위를 벗어나면, 범위안에 유지하도록 회전하는 방식입니다.</U>
+      #### 1. <U>플레이어들의 카메라 상의 위치를 받아 일정 영역의 범위를 벗어나면, 범위안에 유지하도록 회전하는 방식입니다.</U>
         - 가장 먼저 생각난 로직이었지만, 플레이창의 해상도에 영향을 받기 때문에 정확한 계산이 어려울 것이라는 단점이 존재했습니다.
-      - ### 2. <U>참조 컴포넌트와 P1과의 거리에 따라 회전하는 방식입니다.</U>
+      #### 2. <U>참조 컴포넌트와 P1과의 거리에 따라 회전하는 방식입니다.</U>
         - 참조 컴포넌트는 P1과 같은 X축에 배치하고, 항상 카메라의 중심에 위치하도록 합니다.
         - 이 컴포넌트와 P1의 사이의 거리가 일정 범위를 벗어난다면, 그 방향으로 회전합니다.
         - 1번 방법과는 다르게 해상도에 영향을 받지 않기 때문에 계산에 오차가 발생하지 않습니다.
 
   - ### __<h3>개선점</h3>__
-    ### 1. <U>네트워크를 지원하지 않았고 로컬에서만 사용이 가능하기 때문에 사용범위가 넓지 않다는 점이 단점입니다.</U>
+    #### 1. <U>네트워크를 지원하지 않았고 로컬에서만 사용이 가능하기 때문에 사용범위가 넓지 않다는 점이 단점입니다.</U>
       - 추후 로컬과 온라인 2가지의 모드로 구분하여 개선해나갈 예정입니다.
-    ### 2. <U>플러그인을 사용하기 위해서는 월드에 있는 플레이어를 직접 카메라와 연결해야 된다는 점이 강한 연결을 띄고 있어 부적절하다고 판단합니다.</U>
+    #### 2. <U>플러그인을 사용하기 위해서는 월드에 있는 플레이어를 직접 카메라와 연결해야 된다는 점이 강한 연결을 띄고 있어 부적절하다고 판단합니다.</U>
       - 자동으로 탐색하는 것이 아닌 플레이 전에 카메라 매니저와 직접 연결을 진행해야 되는데 이는 강한 연결을 띄고 있고, 온라인에서의 사용 또한 부적절합니다.
       - 따로 플레이어들의 접속을 관리하는 매니저를 개발하고, 접속이 확인되면 카메라 매니저에게 넘겨주어서 처리하는 방향으로 개선이 필요합니다.
     
@@ -334,4 +329,4 @@
     - 공격처리나 아이템과 같은 클래스들은 상속을 이용하여 개발하고, 이들을 플레이어에게 컴포지션하여 사용했지만 중복되는 코드가 발생했습니다. 
       - 중복은 클래스 간 호환이 되지 않았기에 중복하여 작성하였고, 이를 개선하기 위해서는 어댑터 패턴을 만족하는 새로운 클래스를 제작하여 처리해야 한다고 생각합니다.
 ---
-<center><h1>감사합니다.</h1></center>  
+<center><h1>이상입니다. 감사합니다.</h1></center>  
